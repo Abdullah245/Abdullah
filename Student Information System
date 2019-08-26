@@ -1,0 +1,115 @@
+Students = ["Abdullah", "Ali", "Saad", "Hamza", "Affan"]
+Class = ["i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x"]
+Roll_no = ["0001", "0002", "0003", "0004", "0005"]
+
+print("\t\t      ~~~~~~")
+print("\t\t--->>> MENU <<<---")
+print("\t\t      ~~~~~~")
+print("   {i} |Enter 1 To Add New Student")
+print("  {ii} |Enter 2 To Remove Student Information")
+print(" {iii} |Enter 3 To View Student's List")
+print("{iiiv} |Enter 4 To Exit")
+
+select = input("Enter Number = ")
+
+
+if select == "1":
+    print("New Student Information:")
+    New_Student_Name = input("Name = " ).title()
+    New_Student_Father_Name = input("Father Name = ").title()
+    New_Student_Class = input("Class \n(i, ii, iii, iv, v, vi, vii, viii, ix, x) = ")
+    if New_Student_Class in Class :
+        if New_Student_Class == "i" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat ")
+        elif New_Student_Class == "ii" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat")
+        elif New_Student_Class == "iii" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat\n 7.Computer\n 8.Sindhi ")
+        elif New_Student_Class == "iiiv" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat\n 7.Computer\n 8.Sindhi ")
+        elif New_Student_Class == "v" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat\n 7.Computer\n 8.Sindhi\n 9.Social Studies ")
+        elif New_Student_Class == "vi" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat\n 7.Computer\n 8.Sindhi\n 9.Social Studies ")
+        elif New_Student_Class == "vii" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Drawing\n 5.Science\n 6.Islamiat\n 7.Computer\n 8.Sindhi\n 9.Social Studies ")
+        elif New_Student_Class == "viii" :
+            print("Subjects :\n 1.Urdu\n 2.English\n 3.Math\n 4.Science\n 5.Islamiat\n 6.Computer\n 7.Sindhi\n 8.Pakistan Studies ")
+        elif New_Student_Class == "ix" :
+            print("Subjects :\n 1.English\n 2.Computer Or Biology\n 3.Sindhi\n 4.Pakistan Studies\n 5.Chemistry ")
+        elif New_Student_Class == "x" :
+            print("Subjects :\n 1.English\n 2.Urdu\n 3.Islamiat\n 4.Math\n 5.Physics")
+        
+        print("New Student Roll Number = 0006")
+      
+        Students.append(New_Student_Name)
+        print("Name Of All Students")
+        print(Students)
+        print("Student Successfully Added")
+            
+    else :
+        print("Please Select From The Following \n(i, ii, iii, iv, v, vi, vii, viii, ix, x) ")
+        print("Please Try Again")
+    
+elif select == "2": 
+    print("Total Students ")
+    print(Students)
+    stdntname = input("Enter Student Name To Remove = " ).title()
+    if stdntname in Students:
+        Students.remove(stdntname)
+        print("Total Students")
+        print(Students)
+        print("Student is successfully deleted")
+    else :
+        print("Invalid Student Name")
+
+elif select == "3" :
+    print("Student List")
+    print(Students)
+    confirmation = input("Do you want more information about students Yes or No : ").title()
+    if confirmation == "Yes" :
+        info = input("Please Enter Name for More Information = ").title()
+        if info == "Abdullah" :
+            print("Student Name = Abdullah ")
+            print("Father Name = Moin ")
+            print("Class =  ix ")
+            print("Roll number = 0001 ")
+            print("Subjects = English, Urdu, Computer")
+        if info == "Ali" :
+            print("Student Name = Ali ")
+            print("Father Name = Asad ")
+            print("Class =  x ")
+            print("Roll number = 0002 ")
+            print("Subjects = English, Urdu, Physics")
+        if info == "Saad" :
+            print("Student Name = Saad ")
+            print("Father Name = Nasir ")
+            print("Class =  viii ")
+            print("Roll number = 0003 ")
+            print("Subjects = English, Urdu, Biology")
+        if info == "Hamza" :
+            print("Student Name = Hamza ")
+            print("Father Name = Noman ")
+            print("Class =  iii ")
+            print("Roll number = 0004 ")
+            print("Subjects = English, Urdu, Islamiat")
+        if info == "Affan" :
+            print("Student Name = Affan ")
+            print("Father Name = Ahmed ")
+            print("Class =  vii ")
+            print("Roll number = 0005 ")
+            print("Subjects = English, Urdu, Math")
+        else :
+            print("Invalid Student Name")
+    elif confirmation == "No" :
+            print("Thank you")
+    else :
+        print("Please Input Yes Or No, Your answer is neither yes nor no")
+        print("Thank you and try again")
+
+            
+elif select == "4" :
+    print("Thank you!\nHope to see you soon")
+
+else:
+    print("Please Enter The Number From The Given Menu, Try Again")
